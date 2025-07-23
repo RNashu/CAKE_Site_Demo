@@ -54,9 +54,9 @@ resource "aws_security_group" "devops_sg" {
 
 # EC2 Instance (Ubuntu)
 resource "aws_instance" "devops_server" {
-  ami                         = "ami-0b5358e1f13744bc7"         # Replace with a valid Ubuntu AMI ID in your region
+  ami                         = "ami-0662f4965dfc70aca"         # Replace with a valid Ubuntu AMI ID in your region
   instance_type               = "t3.medium"                     # You can change this as needed
-  key_name                    = "Naseem"                     # Replace with your existing EC2 key pair name
+  key_name                    = "Demo"                     # Replace with your existing EC2 key pair name
   vpc_security_group_ids      = [aws_security_group.devops_sg.id]
 
   user_data = <<-EOF
